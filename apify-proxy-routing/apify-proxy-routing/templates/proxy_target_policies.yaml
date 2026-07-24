@@ -1,0 +1,42 @@
+version: 1
+
+defaults:
+  enabled: true
+  initial_tier: direct
+  max_tier: residential
+  requires_browser: false
+  session_mode: rotate_per_job
+  max_attempts: 4
+  max_concurrency: 2
+  min_delay_ms: 500
+  max_delay_ms: 2500
+  geographic_fallback: fail_closed
+  resource_blocking:
+    images: true
+    media: true
+    fonts: true
+    analytics: true
+    ads: true
+  budgets:
+    max_bytes_per_job: 50000000
+    max_requests_per_job: 500
+    max_browser_pages_per_job: 100
+
+targets:
+  replace.example:
+    enabled: true
+    initial_tier: direct
+    max_tier: residential
+    requires_browser: false
+    country_code: US
+    subdivision_code: NY
+    session_mode: sticky_per_domain
+    max_concurrency: 2
+    block_signals:
+      status_codes:
+        - 403
+        - 429
+      title_patterns:
+        - access denied
+      body_patterns:
+        - verify you are human
