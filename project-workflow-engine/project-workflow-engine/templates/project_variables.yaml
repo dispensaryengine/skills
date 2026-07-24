@@ -1,0 +1,77 @@
+project:
+  name: ""
+  slug: ""
+  type: ""
+  mode: ""
+  goal: ""
+  primary_user: ""
+  primary_outcome: ""
+  success_metric: ""
+  non_goals: []
+
+repository:
+  url: ""
+  root: "."
+  default_branch: "main"
+  working_branch: ""
+  last_known_working_commit: ""
+  deployed_commit: ""
+
+runtime:
+  package_manager: ""
+  languages: []
+  frameworks: []
+  versions: {}
+  commands:
+    install: ""
+    lint: ""
+    typecheck: ""
+    test: ""
+    build: ""
+    local_run: ""
+    deploy: ""
+
+systems:
+  databases: []
+  external_services: []
+  deployment_targets: []
+  queues: []
+  storage: []
+  authentication: []
+  observability: []
+
+constraints:
+  time: ""
+  budget: ""
+  platform: []
+  security: []
+  compliance: []
+  performance: []
+  reliability: []
+  compatibility: []
+  data: []
+  user_experience: []
+  do_not_change: []
+
+workflow:
+  autonomy_level: "execute_with_review"
+  question_budget: 3
+  max_task_size_hours: 4
+  target_vertical_slice_hours: 8
+  documentation_level: "standard"
+  rollback_required: true
+  preserve_backward_compatibility: true
+
+state:
+  current_phase: 0
+  blockers: []
+  defects: []
+  decisions: []
+  assumptions: []
+  install_status: "unknown"
+  lint_status: "unknown"
+  typecheck_status: "unknown"
+  test_status: "unknown"
+  build_status: "unknown"
+  local_run_status: "unknown"
+  deployment_status: "unknown"
