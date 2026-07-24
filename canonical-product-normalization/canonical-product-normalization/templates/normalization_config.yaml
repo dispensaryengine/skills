@@ -1,0 +1,51 @@
+version: 1
+
+domain: cannabis
+
+categories:
+  - Flower
+  - Pre-Rolls
+  - Vapes
+  - Concentrates
+  - Edibles
+  - Topicals
+  - Tinctures
+
+excluded_classes:
+  - Accessories
+  - Merchandise
+  - Non-Cannabis
+
+matching:
+  thresholds:
+    auto_link: 95
+    attach_review: 80
+    candidate: 60
+  hard_gates:
+    cannabis_eligibility: true
+    brand: true
+    category: true
+    form: true
+    size: true
+    product_name: true
+    extract: true
+    infusion: true
+    hardware: true
+    ratio_profile: true
+
+aliases:
+  brand_registry: ""
+  product_registry: ""
+  require_approval: true
+  product_alias_default_scope: brand
+
+processing:
+  preserve_raw_source: true
+  generate_pek_for_excluded: false
+  create_provisional_mcp_when_no_safe_match: true
+  preserve_rejected_near_matches: true
+
+release:
+  require_regression_pass: true
+  require_reconciliation: true
+  max_unaccounted_rows: 0
